@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#loading-screen {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  background: #000000;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+#loading-icon {
+  position: absolute;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 100px 0 220px;
+}
+
+.menuitems {
+  display: flex;
+  align-items: flex-end;
+}
+
+.menuitems ul {
+  display: flex;
+  cursor: pointer;
+}
+
+.menuitems ul li img {
+  padding-right: 10px;
+}
+
+.menuicon {
+  display: flex;
+}
+
+.items {
+  color: #ffff;
+  padding: 0 130px 0px 0;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  transition: .3s ease-in-out;
+}
+
+.items:hover {
+  transition: .3s ease-in-out;
+  transition-timing-function: ease-in-out;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.bodyofpage {
+  padding-bottom: 200px;
+}
+
+.bop-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.design {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: -25px;
+}
+
+.design p {
+  font-size: 100px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: bold;
+  line-height: 118px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.development {
+  display: flex;
+  justify-content: center;
+  padding-right: 225px;
+  margin-bottom: -15px;
+}
+
+.development p {
+  font-size: 100px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: bold;
+  line-height: 118px;
+  letter-spacing: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: -0   -2px 0   #FFFFFF, 0   -2px 0   #FFFFFF, -0    2px 0   #FFFFFF, 0    2px 0   #FFFFFF, -2px -0   0   #FFFFFF, 2px -0   0   #FFFFFF, -2px  0   0   #FFFFFF, 2px  0   0   #FFFFFF, -1px -2px 0   #FFFFFF, 1px -2px 0   #FFFFFF, -1px  2px 0   #FFFFFF, 1px  2px 0   #FFFFFF, -2px -1px 0   #FFFFFF, 2px -1px 0   #FFFFFF, -2px  1px 0   #FFFFFF, 2px  1px 0   #FFFFFF, -2px -2px 0   #FFFFFF, 2px -2px 0   #FFFFFF, -2px  2px 0   #FFFFFF, 2px  2px 0   #FFFFFF, -2px -2px 0   #FFFFFF, 2px -2px 0   #FFFFFF, -2px  2px 0   #FFFFFF, 2px  2px 0   #FFFFFF;
+}
+
+.pushsite {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.pushsite .invite {
+  position: absolute;
+  left: 1%;
+  bottom: 15%;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: right;
+  color: #fff;
+}
+
+.pushsite p {
+  font-size: 100px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: bold;
+  line-height: 118px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.pushsite p span {
+  color: #717171;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+}
+
+.social .socialItems {
+  padding: 0 80px 0 0;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact .telephone {
+  padding: 0 100px 0 0;
+}
+
+.contact .telephone a {
+  color: #fff;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  transition: .2s;
+}
+
+.contact .telephone a:hover {
+  color: #C86DFF;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.contact .mail a {
+  color: #fff;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  transition: .2s;
+}
+
+.contact .mail a:hover {
+  color: #C86DFF;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.languege {
+  display: flex;
+}
+
+.languege .lang {
+  padding: 0 20px 0 0;
+}
+
+.languege .lang p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffff;
+  transition: .2s;
+}
+
+.languege .lang p:hover {
+  color: #C86DFF;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.showmenu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 22;
+}
+
+.showmenu-wrap {
+  padding: 100px 100px 50px 100px;
+}
+
+.languegeforhide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 175px;
+}
+
+.closemenu {
+  display: flex;
+  align-items: center;
+}
+
+.closemenu p {
+  color: #fff;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.mainmenublock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 235px;
+}
+
+.editforallblockmainmenublock:hover {
+  transition: .3s;
+  cursor: pointer;
+}
+
+.editforallblockmainmenublock:hover .descriptionforhidemenublock .letterhide {
+  display: none;
+}
+
+.editforallblockmainmenublock:hover .descriptionforhidemenublock .spanforletter {
+  display: block;
+  color: #7B7B7B;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.editforallblockmainmenublock:hover .descriptionforhidemenublock .spanforletter span {
+  color: #C86DFF;
+  text-transform: uppercase;
+}
+
+.editforallblockmainmenublock:hover .mainheading p {
+  color: #C86DFF;
+}
+
+.editforallblockmainmenublock:hover .animateforthisblock {
+  height: 150px;
+  border: 1px solid #C86DFF;
+  transition: .3s;
+  transform: translateY(-50%);
+}
+
+.descriptionforhidemenublock {
+  padding-bottom: 45px;
+}
+
+.descriptionforhidemenublock p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #7B7B7B;
+}
+
+.descriptionforhidemenublock .spanforletter {
+  display: none;
+}
+
+.mainheading {
+  height: 200px;
+}
+
+.mainheading p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.animateforthisblock {
+  position: relative;
+  width: 1px;
+  height: 100px;
+  border: 1px solid #7B7B7B;
+}
+
+.footforhideblock {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footforhideblock-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adressforfoothb p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  color: #7B7B7B;
+}
+
+.contactforfoothb a {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  color: #7B7B7B;
+}
+
+.socialforfoothb {
+  display: flex;
+  opacity: .3;
+}
+
+.socialforfoothb .socialItems {
+  padding: 0 20px 0 0;
+}
+
+.copiryght p {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  color: #7B7B7B;
+}
